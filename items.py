@@ -112,7 +112,7 @@ class GingerBread(Consumable):
         self.name = "Gingerbread"
         self.description = "Parts of the recently slain gingerbread man. It's still bleeding, but it bleeds frosting" \
                            "so not all bad!"
-        self.healing = 10
+        self.healing_value = 10
         self.value = 15
 
 class Armor:
