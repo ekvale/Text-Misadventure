@@ -147,7 +147,7 @@ class VictoryTile(MapTile):
                 "I hit, and scourge and scour and scrub," 
                 "You will not survive my sugared threat" 
                 " MY dough it RISES!")
-            print(ascii.gingerbreadlord)
+            print(ascii.gingerbreadlord())
             player.hp = player.hp - self.enemy.damage
             print("Enemy does {} damage. You have {} HP remaining.".format(self.enemy.damage, player.hp))
             player.inventory.append(items.GingerBread())
