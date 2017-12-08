@@ -274,8 +274,8 @@ class Player:
         guess = input("What sayest thou?")
         if guess == answer:
             print("Right you are, please accept this gift. It is most rare, The Gawain Sword")
-            fanfare = pyglet.media.load("resources/fanfare.wav", streaming=True)
-            fanfare.play()
+            ##fanfare = pyglet.media.load("resources/fanfare.wav", streaming=True)
+            ##fanfare.play()
             print(ascii.sword)
             self.inventory.append(items.gawainSword())
         else:

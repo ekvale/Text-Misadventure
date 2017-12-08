@@ -142,15 +142,19 @@ class VictoryTile(MapTile):
                       "He leaps at you daintily with a lethal canter.")
             elif xran < 75:
                 "'Come a little closer' the Gingerbread Lord taunts, 'The oven is still warm!"
+            elif xran <95:
+                player.inventory.append(items.GingerBread())
+                print("You catch His Sweetness by the arm, you pull of a big chunk"
+                      "You put it in your pocket for later! Hahah! Bring it on!")
             else:
                 print("I plunge my doughed hands at you, I lick at you with frosted tongue," 
                 "I hit, and scourge and scour and scrub," 
                 "You will not survive my sugared threat" 
                 " MY dough it RISES!")
-            print(ascii.gingerbreadlord())
+            print(ascii.gingerbreadlord)
             player.hp = player.hp - self.enemy.damage
             print("Enemy does {} damage. You have {} HP remaining.".format(self.enemy.damage, player.hp))
-            player.inventory.append(items.GingerBread())
+
 
 class TraderTile(MapTile):
     def __init__(self, x, y):
@@ -833,15 +837,15 @@ class FiveTile(MapTile):
 
 
 world_dsl = """
-|  |  |VT|  |  |  |  |  |
-|  |  |EN|  |  |  |  |  |
-|  |  |EN|  |  |  |  |  |
-|  |05|EN|EN|EN|  |  |  |
-|02|02|03|04|EN|FG|FG|BL|
-|07|FG|ST|06|TT|  |  |  |
-|  |  |08|EN|EN|  |  |  |
-|  |  |  |  |  |  |  |  |
-|  |  |  |10|09|  |  |  |
+|  |  |VT|  |06|  |  |  |
+|  |  |EN|  |IT|  |  |  |
+|  |  |EN|  |04|  |  |  |
+|  |05|03|EN|EN|  |  |  |
+|02|EN|FG|FG|EN|FG|FG|BL|
+|07|FG|ST|06|EN|  |  |  |
+|EN|  |08|EN|EN|  |  |  |
+|EN|  |  |  |  |  |  |  |
+|TT|  |  |10|09|  |  |  |
 """
 
 def is_dsl_valid(dsl):
